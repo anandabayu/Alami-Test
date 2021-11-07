@@ -1,3 +1,7 @@
+## Import Database
+
+create postgres database and import sql file in `sql/postgres.sql`
+
 ## Config Sring boot
 
 please config the following setting in `application.properties` before running the app:
@@ -12,6 +16,8 @@ spring.data.mongodb.uri=YOUR_MONGODB_URL
 spring.kafka.consumer.bootstrap-servers=YOUR_KAFKA_SERVER
 spring.kafka.producer.bootstrap-servers=YOUR_KAFKA_SERVER
 ```
+
+make sure all services is running, then you can start the backend application through your favorite IDE such as Intellij IDEA, Eclipse etc.
 
 ## Config React
 
