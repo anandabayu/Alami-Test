@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "06cb1d3b-4fd3-4360-9265-845d77c917d8",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LIST USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ananda Bayu\",\n    \"borndate\": \"1997-03-02\",\n    \"address\": \"Jakarta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST TRANSACTIONS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/transactions?start_date=2020-01-01&end_date=2021-12-31",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-12-31"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TRANSACTION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"nominal\": 200000,\n    \"type\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/transactions",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST HISTORY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/history?start_date=2020-01-01&end_date=2021-12-31",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"history"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-12-31"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
