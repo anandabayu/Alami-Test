@@ -42,4 +42,4 @@ npm start
 
 ## Postman Collection
 
-You can import postman collection from `Postman/collection.json` to your postman and don't forget to add `URL` in your environtment.
+You can import postman collection from `Postman/collection.json` to your postman and don't forget to add `URL` variable in your environtment.
