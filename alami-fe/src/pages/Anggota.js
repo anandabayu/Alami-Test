@@ -4,7 +4,7 @@
  * File Created: Sunday, 7th November 2021 4:14:28 pm
  * Author: Ananda Yudhistira (anandabayu12@gmail.com)
  * -----
- * Last Modified: Sunday, 7th November 2021 5:59:11 pm
+ * Last Modified: Monday, 8th November 2021 11:36:28 am
  * Modified By: Ananda Yudhistira (anandabayu12@gmail.com>)
  * -----
  * Copyright 2021 Ananda Yudhistira, -
@@ -73,10 +73,11 @@ export default function Anggota() {
       setTanggalLahir(new Date());
       setAlamat('');
     } catch (err) {
+      let message = err.response.data.message;
       return Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: err,
+        text: message ? message : err.message,
       });
     }
   };
