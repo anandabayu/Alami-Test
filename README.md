@@ -2,6 +2,16 @@
 
 create postgres database and import sql file in `sql/postgres.sql`
 
+## Config Kafka
+
+enable `listeners=PLAINTEXT://:9092` in kafka `server.properties` file
+
+```Shell
+...
+listeners=PLAINTEXT://:9092
+...
+```
+
 ## Config Sring boot
 
 please config the following setting in `application.properties` before running the app:
