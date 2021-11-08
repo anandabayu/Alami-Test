@@ -12,6 +12,18 @@ listeners=PLAINTEXT://:9092
 ...
 ```
 
+then you can run zookeper and kafka on separate terminal
+
+```Shell
+cd to kafka folder
+sh bin/zookeeper-server-start.sh config/zookeeper.properties
+```
+
+```Shell
+cd to kafka folder
+sh bin/kafka-server-start.sh config/server.properties
+```
+
 ## Config Sring boot
 
 please config the following setting in `application.properties` before running the app:
